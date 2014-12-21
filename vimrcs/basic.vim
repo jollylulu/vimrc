@@ -65,6 +65,10 @@ nmap <leader>w :w!<cr>
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
+" set cursorline
+set cursorline
+" 自动删除行末空格
+autocmd BufWrite * execute ":s/\s*$//"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
